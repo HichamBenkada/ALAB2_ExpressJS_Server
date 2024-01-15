@@ -1,12 +1,15 @@
 const express = require('express');
 const app = express();
-const router = express.Router();
 const PORT = 5500;
 
 //----- importing users routes:
 const usersRouter = require("./routes/users");
+ 
+/**
+ * View engines
+ */
 
-//----- importing file sytem:
+//---- 1st: -Default Best:::Perscholas...
 const fs = require('fs');
 //----- Tamplate Engines:
 //default
@@ -21,8 +24,7 @@ app.engine("perscholas",(filePath, options, callback)=>{
     });
 });
 
-
-// // set the view engine to ejs
+//---- 2st: -Make use of EJS view engine...
 // app.set('view engine', 'ejs');
 
 //---- After middleware we call routes:

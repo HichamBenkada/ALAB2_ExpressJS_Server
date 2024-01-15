@@ -5,7 +5,7 @@ const router = express.Router()
 router
 .route('/')
 .get((req,res) => {
-    res.send("Hello! I am at users")
+    res.send("Hello! I am at users route path...")
 })
 
 
