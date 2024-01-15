@@ -17,11 +17,8 @@ This project is to use the knowledge of Express tools and techniques to construc
 
 #### Part 1: Routes, Templates, and Views
 
-Create a view engine that allows you to customize at least three portions of your views. 
-Alternatively, research and use one of the following view engines:
-Pug
-Mustache
-EJS
+Creating a view engine that allows you to customize at least three portions of your views. 
+ view engines:Pug, Mustache, or EJS
 Note that using a fully-featured view engine will allow you much more flexibility in creating views, and may reduce overall development time, but the research period may take more time upfront. Time management is another important skill in development, so perform a brief amount of research before deciding which path you would like to take.
 Create at least two different view templates for your chosen view engine.
 Within those views, include some type of navigation that allows you to swap between views. Since the default HTTP request method is "GET," this can be as simple as an anchor link that navigates to the other view's relative URL.
