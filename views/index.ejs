@@ -6,24 +6,7 @@
     <title>Server Side Rendering |<%=title%> </title>
   </head>
   <body>
-    <nav>
-      <div class="title">
-        <a href="/">Math School</a>
-      </div>
-      <ul>
-        <li>
-          <a href="/"> Home </a>
-        </li>
-        <li>
-          <a href="/about"> About </a>
-        </li>
-        <li>
-          <a href="/posts"> Posts </a>
-        </li>
-      </ul>
-    </nav>
-
-
+   <%- include('./partials/header.html') %>
     <div id="content">
       <% options.forEach((option)=>{ %>
       <!-- we use equal "=" to get the assigned value -->
@@ -32,5 +15,7 @@
       <p> <%- option.content %> </p>
       <%})%>
     </div>
+
+    <%- include('./partials/footer.html') %>
   </body>
 </html>

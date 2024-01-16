@@ -1,13 +1,28 @@
 const express = require("express");
+const morgan = require('morgan');
 const app = express();
 const PORT = 5500;
+//-------------
 
-/**
- * Make use of EJS view engine
- */
+
+//Make use of EJS view engine 
 app.set("view engine", "ejs");
 // //Styles
 app.use(express.static("styles"));
+
+
+//using third-party middleware
+const logger =morgan((tokens, req, res)=>{
+  return [
+    tokens.method(req, res),
+    tokens.url(req, res),
+    tokens.status(req, res),
+    tokens.res(req, res, 'content-length'), '-',
+    tokens['response-time'](req, res), 'ms'
+  ].join(' ')
+});
+app.use(logger);
+
 
 app.get("/", (req, res) => {
   const options = [
@@ -40,11 +55,14 @@ app.get("/about", (req, res) => {
   res.render("about");
 });
 
-// if page not found
+// if page not found: "Posts" is not defined
 app.use((req, res) => {
   res.status(404).render("404");
 });
 
+
+
+//--------------
 app.listen(PORT, () => {
   console.log(`Hicham's Server is waiting for calls on port ${PORT}`);
 });
