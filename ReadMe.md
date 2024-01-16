@@ -16,7 +16,7 @@ This project is to use the knowledge of Express tools and techniques to construc
 - Use Git effectively.
 
 #### Part 1: Routes, Templates, and Views
-
+Completed!
 Creating a view engine that allows you to customize at least three portions of your views. 
  view engines:Pug, Mustache, or EJS
 Note that using a fully-featured view engine will allow you much more flexibility in creating views, and may reduce overall development time, but the research period may take more time upfront. Time management is another important skill in development, so perform a brief amount of research before deciding which path you would like to take.
@@ -25,19 +25,22 @@ Within those views, include some type of navigation that allows you to swap betw
 Include a basic form in at least one view that sends a POST request to a route within your application. For now, just log that data to the console within your route and send a simple "success" response. We will explore APIs in greater detail in a future lesson.
 Within your routes, include at least one instance of a route parameter that modifies what is rendered to the client.
 
-Part 2: Middleware
+#### Part 2: Middleware
+Completed!
 Within your application, create a piece of middleware. or for some practical purpose, use third-party middleware. This can be as simple as logging specific request data; however, it will benefit you to find a more interesting use case for practice purposes or to research third-party middleware.
 
-Part 3: Exploring Response Options
+#### Part 3: Exploring Response Options
+Completed!
 Within one of your views, include an image that is stored locally in your project's file system. In order for this image to be served, you will need to use the Express static middleware, as shown in the lesson.
 Build a "download" button that makes a request to your Express server on click. There are several ways to do this.
 The response to this particular button should include the res.download() method, and allow the user to download the image you included within the view.
 Research the response object's download method to see how it works, and implement the above in whatever way you think is appropriate. Being able to research well and sift through documentation is one of the most important skills for developers to have.
 Remember, functionality takes precedence over appearance for this assignment.
 
-Part 4: Open Exploration
-As long as the functionality described in the parts above has been implemented, take any remaining time to explore other options available to you. Collaborate with your peers to brainstorm ideas, ask questions of your instructors, and see what is possible. Be creative!
-This assignment is not graded, but the application should run properly before being submitted. After you are finished with your exploration period,  comment out anything that is unfinished or prevents the application from running.
+#### Part 4: Open Exploration:
 
-Part 5: Completion
-Upload your project to a GitHub repository, and submit it according to the submission instructions at the beginning of this document.
+ the functionality described in the parts above has been implemented and tested. 
+ 
+ Thank you for your time.
+ 
+ I am willing to explore more options available, collaborate with peers to brainstorm ideas, and see what is possible to make my server application more effecient.
