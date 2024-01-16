@@ -8,7 +8,7 @@ const PORT = 5500;
 //Make use of EJS view engine 
 app.set("view engine", "ejs");
 // //Styles
-app.use(express.static("styles"));
+app.use(express.static("./styles"));
 
 
 //using third-party middleware
@@ -24,7 +24,8 @@ const logger =morgan((tokens, req, res)=>{
 app.use(logger);
 
 
-app.get("/", (req, res) => {
+app
+.get("/", (req, res) => {
   const options = [
     {
       title: "SSR(Server-side rendering)",
@@ -48,12 +49,15 @@ app.get("/", (req, res) => {
   ];
 
   res.render("index", { title: "Home", options });
-});
-
+})
 // about page
-app.get("/about", (req, res) => {
+.get("/about", (req, res) => {
   res.render("about");
-});
+})
+//post with download
+.get('/post',(req,res)=>{
+  res.download('image.png')
+})
 
 // if page not found: "Posts" is not defined
 app.use((req, res) => {
@@ -64,5 +68,5 @@ app.use((req, res) => {
 
 //--------------
 app.listen(PORT, () => {
-  console.log(`Hicham's Server is waiting for calls on port ${PORT}`);
+  console.log(`Hicham's Server is running on port ${PORT}`);
 });

@@ -9,15 +9,20 @@ body {
 
 ul {
   display: flex;
+  justify-content: space-around;
 }
 li {
   list-style-type: none;
+  
 }
 
 #content {
   margin: 10px auto;
-  border: 1px solid #232323 ;
-  width: 1000px;
+  padding: 10px;
+  background-color: lightblue;
+  border: 1px dashed lightblue ;
+  border-radius: 10px;
+  width: 75%;
 }
 
 code {
@@ -29,7 +34,11 @@ code {
 
 a {
   color: #0079c0;
+  text-decoration: none;
 }
 a:hover {
   color: #009cdb;
+  padding: 1px;
+  border:0.5px solid #09507c;
+  border-radius: 10px;
 }
