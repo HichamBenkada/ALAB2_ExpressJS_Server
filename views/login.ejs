@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Form</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+   <%- include('./partials/header.html') %>
+    <div id="content">
+      <form id="form" action="/login" method="POST">
+        <input type="text" name="userName" placeholder="Enter your name">
+        <input type="email" name="userEmail" placeholder="Enter your email">
+        <input type="password" name="userPassword" placeholder="Enter your password">
+        <input type="submit" value="LogIn">
+      </form>
+    </div>
+
+    <%- include('./partials/footer.html') %>
+  </body>
+</html>

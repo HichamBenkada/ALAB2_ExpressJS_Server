@@ -23,6 +23,9 @@ const logger =morgan((tokens, req, res)=>{
 });
 app.use(logger);
 
+//Post handling middlewares:
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
 app
 .get("/", (req, res) => {
@@ -54,17 +57,28 @@ app
 .get("/about", (req, res) => {
   res.render("about");
 })
-//post with download
-.get('/post',(req,res)=>{
+//post form
+.get("/login", (req, res) => {
+  res.render("login");
+})
+//download
+.get('/download',(req,res)=>{
   res.download('image.png')
 })
-
+.post('/login', (req,res )=>{
+  const { userName, userEmail, userPassword, status } = req.body;
+  if(userName && userEmail && userPassword){
+    res.send(`Success! Your form has been submitted: user name: ${userName}, Email: ${userEmail} and your password: [hidden]********${userPassword}`)
+  }
+  else{
+    res.send(' Failed! Please fill out the entire form...<a href="./login">Log In</a>')
+    // res.render('login')
+  }
+})
 // if page not found: "Posts" is not defined
 app.use((req, res) => {
   res.status(404).render("404");
 });
-
-
 
 //--------------
 app.listen(PORT, () => {
